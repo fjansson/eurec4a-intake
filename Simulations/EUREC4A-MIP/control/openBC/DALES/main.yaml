@@ -1,0 +1,18 @@
+plugins:
+  source:
+     - module: intake_xarray
+
+sources:
+  coarse:
+    args:
+      path: "{{CATALOG_DIR}}/coarse.yaml"
+    description: "DALES"
+    driver: yaml_file_cat
+    metadata: {}
+  fine:
+    args:
+      path: "{{CATALOG_DIR}}/fine.yaml"
+    description: "DALES"
+    driver: yaml_file_cat
+    metadata: {}
+

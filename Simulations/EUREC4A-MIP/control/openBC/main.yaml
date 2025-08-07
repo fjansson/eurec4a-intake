@@ -1,0 +1,12 @@
+plugins:
+  source:
+     - module: intake_xarray
+
+sources:
+  DALES:
+    args:
+      path: "{{CATALOG_DIR}}/DALES/main.yaml"
+    description: "DALES"
+    driver: yaml_file_cat
+    metadata: {}
+

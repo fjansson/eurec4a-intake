@@ -9,3 +9,10 @@ sources:
     description: "Simulation setups"
     driver: yaml_file_cat
     metadata: {}
+  openBC:
+    args:
+      path: "{{CATALOG_DIR}}/openBC/main.yaml"
+    description: "LES simulatins with open boundary conditions"
+    driver: yaml_file_cat
+    metadata: {}
+    

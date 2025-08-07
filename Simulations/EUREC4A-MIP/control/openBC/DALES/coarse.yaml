@@ -1,0 +1,18 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  tab3:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_0913c8f3-e7b6-4f94-9221-06880d4ccfea/DALES_coarse/tab3_2D.zarr
+    description:  Table 3. 2D Surface, TOM and TOA output, hourly.
+    driver: zarr
+
+  tab4:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_0913c8f3-e7b6-4f94-9221-06880d4ccfea/DALES_coarse/tab4_2D.zarr
+    description: Table 4. 2D high temporal resolution output, 5 min interval.
+    driver: zarr
