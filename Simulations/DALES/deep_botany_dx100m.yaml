@@ -1,0 +1,25 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  nx384:
+    args:
+      path: "{{CATALOG_DIR}}/deep_botany_dx100m_nx384.yaml"
+    description: 'Deep botany: DALES LES deep convection ensemble with varied forcings at 100m grid spacing, 38.4 km domain'
+    driver: yaml_file_cat
+    metadata: {}
+
+  nx1536:
+    args:
+      path: "{{CATALOG_DIR}}/deep_botany_dx100m_nx1536.yaml"
+    description: 'Deep botany: DALES LES deep convection ensemble with varied forcings at 100m grid spacing, 153.6 km domain'
+    driver: yaml_file_cat
+    metadata: {}
+
+  nx4608:
+    args:
+      path: "{{CATALOG_DIR}}/deep_botany_dx100m_nx4608.yaml"
+    description: 'Deep Botany: DALES LES deep convection ensemble with varied forcings at 100m grid spacing, 460.8 km domain'
+    driver: yaml_file_cat
+    metadata: {}

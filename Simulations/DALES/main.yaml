@@ -9,3 +9,10 @@ sources:
     description: 'Cloud botany LES ensemble'
     driver: yaml_file_cat
     metadata: {}
+
+  deep_botany:
+    args:
+      path: "{{CATALOG_DIR}}/deep_botany.yaml"
+    description: 'Deep Botany deep convection LES ensemble'
+    driver: yaml_file_cat
+    metadata: {}
