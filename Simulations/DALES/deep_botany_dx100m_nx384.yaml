@@ -1,0 +1,53 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  profiles:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_01D/deep_botany_384_profiles.zarr
+    description: Profiles, horizontally averaged
+    driver: zarr
+
+  timeseries:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_01D/deep_botany_384_timeseries.zarr
+    description: Timeseries of domain means
+    driver: zarr
+
+  2D:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_2D/deep_botany_384_2D.zarr
+    description: 2D fields
+    driver: zarr
+
+  cross_xy:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_cross/deep_botany_384_cross.zarr
+    description: XY cross-sections
+    driver: zarr
+
+  radiation:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_radiation/deep_botany_384_radiation.zarr
+    description: Radiation fields
+    driver: zarr
+
+  tend:
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_tend/deep_botany_384_tend.zarr
+    description: Horizontally coarse-grained tendencies
+    driver: zarr
+
+  parameters:
+    args:
+      urlpath: https://swift.dkrz.de/v1/dkrz_b42c6bc6-439f-4efb-9491-db3de70ad9ba/deep_botany_384_01D/deep_botany_384_params_records.json.zip
+      compression: zip
+    description: Parameters of experiments
+    driver: json
